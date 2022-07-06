@@ -26,7 +26,9 @@ if (figma.editorType === 'figma') {
         rect.x = i * 150;
         
         // 修改其填充色​
-        rect.fills = [{type: 'SOLID', color: {r: 1, g: 0.5, b: 0}}];
+        // rect.fills = [{type: 'SOLID', color: {r: 1, g: 0.5, b: 0}}];
+        //小改一下，生成随机颜色
+        rect.fills = [{type: 'SOLID', color: {r: Math.random(), g: Math.random(), b: Math.random() }}]
         
         // 将创建后的矩形矩形添加到当前页面中
         figma.currentPage.appendChild(rect);
