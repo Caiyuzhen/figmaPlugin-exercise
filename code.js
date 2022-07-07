@@ -17,7 +17,9 @@ if (figma.editorType === 'figma') {
                 // 修改其位置
                 rect.x = i * 150;
                 // 修改其填充色​
-                rect.fills = [{ type: 'SOLID', color: { r: 1, g: 0.5, b: 0 } }];
+                // rect.fills = [{type: 'SOLID', color: {r: 1, g: 0.5, b: 0}}];
+                //小改一下，生成随机颜色
+                rect.fills = [{ type: 'SOLID', color: { r: Math.random(), g: Math.random(), b: Math.random() } }];
                 // 将创建后的矩形矩形添加到当前页面中
                 figma.currentPage.appendChild(rect);
                 // 添加到节点数组中​
@@ -43,7 +45,8 @@ else {
                 // 你可以将 shapeType 设置为以下之一。正方形' | '椭圆' | '圆角矩形' | '钻石' | '三角形_上' | '三角形_下' | '平行四边形_右' | '平行四边形_左' 
                 shape.shapeType = 'ROUNDED_RECTANGLE';
                 shape.x = i * (shape.width + 200);
-                shape.fills = [{ type: 'SOLID', color: { r: 1, g: 0.5, b: 0 } }];
+                // shape.fills = [{ type: 'SOLID', color: { r: 1, g: 0.5, b: 0 } }];
+                shape.fills = [{ type: 'SOLID', color: { r: Math.random(), g: Math.random(), b: Math.random() } }]
                 figma.currentPage.appendChild(shape);
                 nodes.push(shape);
             }
